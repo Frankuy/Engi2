@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <string>
-
+#include <vector>
 #include "../Point.h"
 #include "../Renderable.h"
 #include "../LinkedList.h"
 #include "../Animal/FarmAnimal.h"
+
 using namespace std;
 
 class Cell {
@@ -46,7 +47,7 @@ class Cell {
 				//Mengubah isi dari map
 
 			//METHOD
-			void cetakMap(Point lokasi, LinkedList<FarmAnimal>& animal);
+			// void cetakMap(Point lokasi, vector<FarmAnimal>& animal);
 				//Mencetak map Cell
 };
 

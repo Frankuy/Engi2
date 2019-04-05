@@ -1,7 +1,7 @@
     
 #include <iostream>
 #include "Kuda.h"
-#include "Product/FarmProduct/SusuKuda.h"
+#include "../Product/FarmProduct/SusuKuda.h"
 using namespace std;
 
 Kuda::Kuda(Point lokasi, string nama, string suara, int lapar ):  MilkProducingFarmAnimal(lokasi, nama, suara, lapar){

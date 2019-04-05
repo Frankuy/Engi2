@@ -40,7 +40,5 @@ class FarmAnimal {
         virtual void bersuara(); //mengeluarkan suara berupa cetakan ke terminal
         virtual void mati(); //destruct hewan
         virtual void makan(); //makan rumput, mengubah status lapar
-        virtual void makan(Land*); //makan rumput, mengubah status lapar
-        virtual void makan(Cell*);
 };
 #endif

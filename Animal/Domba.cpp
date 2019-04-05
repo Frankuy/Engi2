@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Domba.h"
-#include "Product/FarmProduct/DagingDomba.h"
-#include "Product/FarmProduct/SusuDomba.h"
+#include "../Product/FarmProduct/DagingDomba.h"
+#include "../Product/FarmProduct/SusuDomba.h"
 using namespace std;
 
 Domba::Domba(Point lokasi, string nama, string suara, int lapar ):  MilkProducingFarmAnimal(lokasi, nama, suara, lapar), MeatProducingFarmAnimal(lokasi, nama, suara, lapar){

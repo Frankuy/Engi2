@@ -15,6 +15,7 @@ using namespace std;
 #include <stdlib.h>
 #include <time.h>
 #include "FarmAnimal.h"
+#include "../Cell/Land/Land.h"
 using namespace std;
 
 //Point lokasi; //lokasi hewan
@@ -90,17 +91,16 @@ void FarmAnimal::mati(){
     cout << "Si " << nama << " telah mati." << endl; 
 }
 
-void FarmAnimal::makan(Land* place){
-    if(place->getAdaRumputnya()){  
-        cout << "Si " << nama << " makan." << endl;
-        lapar = false;
-        place->setAdaRumputnya(false);
-    } 
-    else{
-        cout << "Tidak bisa makan disini" << endl;
-    }
+void FarmAnimal::makan() {
+    lapar = false;
 }
-
-void FarmAnimal::makan(Cell* place){
-    cout << "Tidak bisa makan disini" << endl;
-}
+// void FarmAnimal::makan(Land* place){
+//     if(place->getAdaRumputnya()){  
+//         cout << "Si " << nama << " makan." << endl;
+//         lapar = false;
+//         place->setAdaRumputnya(false);
+//     } 
+//     else{
+//         cout << "Tidak bisa makan disini" << endl;
+//     }
+// }
