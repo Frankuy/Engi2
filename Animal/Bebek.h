@@ -6,6 +6,7 @@
 
 class Bebek : public EggProducingFarmAnimal, public MeatProducingFarmAnimal, public Renderable {
     /* Bebek : kelas ini merepresentasikan kelas rill Bebek */
+    public: 
     //KONSTRUKTOR
     Bebek(Point lokasi, string nama, string suara, int lapar);
     char render();

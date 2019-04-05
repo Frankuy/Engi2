@@ -86,14 +86,14 @@ class Player : public Renderable {
         void status(); //!< Mengeprint status terkini dari player
 
         //METHODD
-        void talk(FarmAnimal&); //!< Berbicara dengan hewan
-        void interact(FarmAnimal&); //!< Berinteraksi dengan hewan untuk mendapatkan FarmProduct
-        void interact(MeatProducingFarmAnimal&); //!< Berinteraksi dengan hewan dengan kill lalu mendapatkan MeatProduct
+        void talk(FarmAnimal*); //!< Berbicara dengan hewan
+        void interact(FarmAnimal*); //!< Berinteraksi dengan hewan untuk mendapatkan FarmProduct
+        void interact(MeatProducingFarmAnimal*); //!< Berinteraksi dengan hewan dengan kill lalu mendapatkan MeatProduct
         void interact(Well); //!< Interaksi dengan well
         void interact(Truck); //!< Interaksi dengan truck 
-        void kill(MeatProducingFarmAnimal&); //!< Menyembelih hewan yang dapat menghasilkan daging
-        void grow(Cell&); //!< Menumbuhkan rumput pada Land
-        void mix(Cell&); //!<  Menggunakan mixers
+        void kill(MeatProducingFarmAnimal*); //!< Menyembelih hewan yang dapat menghasilkan daging
+        void grow(Cell*); //!< Menumbuhkan rumput pada Land
+        void mix(Cell*); //!<  Menggunakan mixers
         void gerak(int); //!< Bergerak pada cell selama di petak tidak ada Hewan
         char render(); //!< Mengembalikkan representasi objek Player 'P' untuk dicetak pada terminal
         string getType();

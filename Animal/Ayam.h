@@ -6,6 +6,7 @@
 
 class Ayam : public EggProducingFarmAnimal, public MeatProducingFarmAnimal, public Renderable {
     /* Ayam : kelas ini merepresentasikan kelas rill Ayam */
+    public:
     //KONSTRUKTOR
     Ayam(Point lokasi, string nama, string suara, int lapar);
     char render();

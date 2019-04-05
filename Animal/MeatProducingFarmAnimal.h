@@ -8,7 +8,7 @@
 using namespace std;
 
 
-class MeatProducingFarmAnimal : public FarmAnimal {
+class MeatProducingFarmAnimal : virtual public FarmAnimal {
     /* Kelas ini merepresentasikan Hewan yang dapat menghasilkan daging */
     protected:
         bool ableProduceMeat; //apakah hewan sudah bisa memproduksi daging atau tidak.
@@ -23,6 +23,6 @@ class MeatProducingFarmAnimal : public FarmAnimal {
         bool getAbleProduceMeat();
         
         //METHOD
-        virtual FarmProduct produceMeat() = 0; //menghasilkan farmproduct berupa meat
+        FarmProduct produceMeat(); //menghasilkan farmproduct berupa meat
 };
 #endif

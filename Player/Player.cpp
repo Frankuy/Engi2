@@ -108,15 +108,15 @@ void Player::status() {
 }
 
 //METHOD
-void Player::talk(FarmAnimal &a) {
-    a.bersuara();
+void Player::talk(FarmAnimal *a) {
+    a->bersuara();
 }
 
-void Player::interact(FarmAnimal &f) {
+void Player::interact(FarmAnimal *f) {
     //f.produce();
 }
 
-void Player::interact(MeatProducingFarmAnimal &m) {
+void Player::interact(MeatProducingFarmAnimal *m) {
     kill(m);
 }
 
@@ -134,32 +134,32 @@ void Player::interact(Truck t) {
     uang += pendapatan;
 }
 
-void Player::kill(MeatProducingFarmAnimal &m) {
-    m.mati();
+void Player::kill(MeatProducingFarmAnimal* m) {
+    m->mati();
 }
 
-void Player::grow(Cell& map) {
+void Player::grow(Cell* map) {
     if (ember > 0) {
-        if (map.getIsi(lokasi)->getType() == "Coop") {
+        if (map->getIsi(lokasi)->getType() == "Coop") {
             ember--;
             Coop *c = new Coop(lokasi);
             c->setAdaRumputnya(true);
             Renderable *a = c;
-            map.setIsi(lokasi, *a);
+            map->setIsi(lokasi, *a);
         }
-        else if (map.getIsi(lokasi)->getType() == "Barn") {
+        else if (map->getIsi(lokasi)->getType() == "Barn") {
             ember--;
             Barn *c = new Barn(lokasi);
             c->setAdaRumputnya(true);
             Renderable *a = c;
-            map.setIsi(lokasi, *a);
+            map->setIsi(lokasi, *a);
         }
-        else if (map.getIsi(lokasi)->getType() == "Grassland") { 
+        else if (map->getIsi(lokasi)->getType() == "Grassland") { 
             ember--;
             Grassland *c = new Grassland(lokasi);
             c->setAdaRumputnya(true);
             Renderable *a = c;
-            map.setIsi(lokasi, *a);
+            map->setIsi(lokasi, *a);
         }
     }
     else {
@@ -167,7 +167,7 @@ void Player::grow(Cell& map) {
     }
 }
 
-void Player::mix(Cell& c) {
+void Player::mix(Cell* c) {
     //
 }
 

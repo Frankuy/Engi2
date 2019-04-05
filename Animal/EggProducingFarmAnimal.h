@@ -7,7 +7,7 @@
 #include <string>
 using namespace std;
 
-class EggProducingFarmAnimal : public FarmAnimal {
+class EggProducingFarmAnimal : virtual public FarmAnimal {
     /* Kelas ini merepresentasikan Hewan yang dapat menghasilkan telur */
     protected:
         bool ableProduceEgg; //apakah hewan sudah bisa memproduksi telur atau tidak.

@@ -7,7 +7,7 @@ using namespace std;
 
 #ifndef MILKANIMAL_H
 #define MILKANIMAL_H
-class MilkProducingFarmAnimal : public FarmAnimal {
+class MilkProducingFarmAnimal : virtual public FarmAnimal {
     /* Kelas ini merepresentasikan Hewan yang dapat menghasilkan susu */
     protected:
         bool ableProduceMilk; //apakah hewan sudah bisa memproduksi susu atau tidak.

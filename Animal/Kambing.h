@@ -6,6 +6,7 @@
 
 class Kambing: public MilkProducingFarmAnimal, public MeatProducingFarmAnimal, public Renderable {
     /* Kambing : kelas ini merepresentasikan kelas rill Kambing */
+    public:
     //KONSTRUKTOR
     Kambing(Point lokasi, string nama, string suara, int lapar);
     char render();
